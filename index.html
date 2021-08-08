@@ -25,5 +25,41 @@
     </svg>
     <button onclick="change()">Change Blend</button>
     <script src="colorBlend.js"></script>
+    <!-- https://css-tricks.com/svg-path-syntax-illustrated-guide/ -->
+
+    <!-- M
+x,y	Move to the absolute coordinates x,y
+m
+x,y	Move to the right x and down y (or left and up if negative values)
+L
+x,y	Draw a straight line to the absolute coordinates x,y
+l
+x,y	Draw a straight line to a point that is relatively right x and down y (or left and up if negative values)
+H
+x	Draw a line horizontally to the exact coordinate x
+h
+x	Draw a line horizontally relatively to the right x (or to the left if a negative value)
+V
+y	Draw a line vertically to the exact coordinate y
+v
+y	Draw a line vertically relatively down y (or up if a negative value)
+Z
+(or
+z
+)	Draw a straight line back to the start of the path -->
+    <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 80 80
+                 A 45 45, 0, 0, 0, 125 125
+                 L 125 80 Z" fill="green"/>
+        <path d="M 230 80
+                 A 45 45, 0, 1, 0, 275 125
+                 L 275 80 Z" fill="red"/>
+        <path d="M 80 230
+                 A 45 45, 0, 0, 1, 125 275
+                 L 125 230 Z" fill="purple"/>
+        <path d="M 230 230
+                 A 45 45, 0, 1, 1, 275 275
+                 L 275 230 Z" fill="blue"/>
+      </svg>
   </body>
 </html>
